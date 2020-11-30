@@ -1,0 +1,9 @@
+C:\DESARROLLO\Application\Server\Server\Server.Entities\bin\Debug\netcoreapp3.1\Server.Entities.deps.json
+C:\DESARROLLO\Application\Server\Server\Server.Entities\bin\Debug\netcoreapp3.1\Server.Entities.dll
+C:\DESARROLLO\Application\Server\Server\Server.Entities\bin\Debug\netcoreapp3.1\Server.Entities.pdb
+C:\DESARROLLO\Application\Server\Server\Server.Entities\obj\Debug\netcoreapp3.1\Server.Entities.csprojAssemblyReference.cache
+C:\DESARROLLO\Application\Server\Server\Server.Entities\obj\Debug\netcoreapp3.1\Server.Entities.AssemblyInfoInputs.cache
+C:\DESARROLLO\Application\Server\Server\Server.Entities\obj\Debug\netcoreapp3.1\Server.Entities.AssemblyInfo.cs
+C:\DESARROLLO\Application\Server\Server\Server.Entities\obj\Debug\netcoreapp3.1\Server.Entities.csproj.CoreCompileInputs.cache
+C:\DESARROLLO\Application\Server\Server\Server.Entities\obj\Debug\netcoreapp3.1\Server.Entities.dll
+C:\DESARROLLO\Application\Server\Server\Server.Entities\obj\Debug\netcoreapp3.1\Server.Entities.pdb

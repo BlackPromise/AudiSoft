@@ -1,0 +1,12 @@
+C:\DESARROLLO\Application\Server\Server\Server.Logic\bin\Debug\netcoreapp3.1\Server.Logic.deps.json
+C:\DESARROLLO\Application\Server\Server\Server.Logic\bin\Debug\netcoreapp3.1\Server.Logic.dll
+C:\DESARROLLO\Application\Server\Server\Server.Logic\bin\Debug\netcoreapp3.1\Server.Logic.pdb
+C:\DESARROLLO\Application\Server\Server\Server.Logic\bin\Debug\netcoreapp3.1\Server.Entities.dll
+C:\DESARROLLO\Application\Server\Server\Server.Logic\bin\Debug\netcoreapp3.1\Server.Entities.pdb
+C:\DESARROLLO\Application\Server\Server\Server.Logic\obj\Debug\netcoreapp3.1\Server.Logic.csprojAssemblyReference.cache
+C:\DESARROLLO\Application\Server\Server\Server.Logic\obj\Debug\netcoreapp3.1\Server.Logic.AssemblyInfoInputs.cache
+C:\DESARROLLO\Application\Server\Server\Server.Logic\obj\Debug\netcoreapp3.1\Server.Logic.AssemblyInfo.cs
+C:\DESARROLLO\Application\Server\Server\Server.Logic\obj\Debug\netcoreapp3.1\Server.Logic.csproj.CoreCompileInputs.cache
+C:\DESARROLLO\Application\Server\Server\Server.Logic\obj\Debug\netcoreapp3.1\Server.Logic.csproj.CopyComplete
+C:\DESARROLLO\Application\Server\Server\Server.Logic\obj\Debug\netcoreapp3.1\Server.Logic.dll
+C:\DESARROLLO\Application\Server\Server\Server.Logic\obj\Debug\netcoreapp3.1\Server.Logic.pdb

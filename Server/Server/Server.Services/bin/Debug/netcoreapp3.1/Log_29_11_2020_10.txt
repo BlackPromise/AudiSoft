@@ -1,0 +1,44 @@
+# APP
+# © Copy 2020
+# Events: 
+General: [Detail:Input string was not in a correct format.], [EX:System.FormatException: Input string was not in a correct format.
+   at Server.Logic.DataAccess.Execute(String Procedure, Dictionary`2 Parameters) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 47
+   at Server.Logic.Quotation.InsertOrUpdate(Quotation item) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 45
+   at Server.Services.Controllers.QuotationController.Post(Quotation value) in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\QuotationController.cs:line 40] ,[InnerException:No.] 
+
+General: [Detail:Input string was not in a correct format.], [EX:System.FormatException: Input string was not in a correct format.
+   at Server.Logic.DataAccess.Execute(String Procedure, Dictionary`2 Parameters) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 47
+   at Server.Logic.Quotation.InsertOrUpdate(Quotation item) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 45
+   at Server.Services.Controllers.QuotationController.Post(Quotation value) in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\QuotationController.cs:line 40] ,[InnerException:No.] 
+
+General: [Detail:Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.], [EX:System.Data.SqlClient.SqlException (0x80131904): Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.
+   at Server.Logic.DataAccess.Execute(String Procedure, Dictionary`2 Parameters) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 47
+   at Server.Logic.Quotation.DeleteDetail(String SessionValue) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 76
+   at Server.Logic.Quotation.InsertOrUpdate(Quotation item) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 52
+   at Server.Services.Controllers.QuotationController.Post(Quotation value) in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\QuotationController.cs:line 40
+ClientConnectionId:91593ad8-ee07-4c70-a474-8d887b3a853e
+Error Number:8144,State:2,Class:16] ,[InnerException:No.] 
+
+General: [Detail:Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.], [EX:System.Data.SqlClient.SqlException (0x80131904): Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.
+   at Server.Logic.DataAccess.Execute(String Procedure, Dictionary`2 Parameters) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 47
+   at Server.Logic.Quotation.DeleteDetail(String SessionValue) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 76
+   at Server.Logic.Quotation.InsertOrUpdate(Quotation item) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 52
+   at Server.Services.Controllers.QuotationController.Post(Quotation value) in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\QuotationController.cs:line 40
+ClientConnectionId:91593ad8-ee07-4c70-a474-8d887b3a853e
+Error Number:8144,State:2,Class:16] ,[InnerException:No.] 
+
+General: [Detail:Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.], [EX:System.Data.SqlClient.SqlException (0x80131904): Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.
+   at Server.Logic.DataAccess.Execute(String Procedure, Dictionary`2 Parameters) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 47
+   at Server.Logic.Quotation.DeleteDetail(String SessionValue) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 76
+   at Server.Logic.Quotation.InsertOrUpdate(Quotation item) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 52
+   at Server.Services.Controllers.QuotationController.Post(Quotation value) in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\QuotationController.cs:line 40
+ClientConnectionId:91593ad8-ee07-4c70-a474-8d887b3a853e
+Error Number:8144,State:2,Class:16] ,[InnerException:No.] 
+
+General: [Detail:Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.], [EX:System.Data.SqlClient.SqlException (0x80131904): Procedure or function Sp_QuotationDetail_Delete has too many arguments specified.
+   at Server.Logic.DataAccess.Execute(String Procedure, Dictionary`2 Parameters) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 47
+   at Server.Logic.Quotation.DeleteDetail(String SessionValue) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 76
+   at Server.Logic.Quotation.InsertOrUpdate(Quotation item) in C:\DESARROLLO\Application\Server\Server\Server.Logic\Quotation.cs:line 52
+   at Server.Services.Controllers.QuotationController.Post(Quotation value) in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\QuotationController.cs:line 40
+ClientConnectionId:91593ad8-ee07-4c70-a474-8d887b3a853e
+Error Number:8144,State:2,Class:16] ,[InnerException:No.] 

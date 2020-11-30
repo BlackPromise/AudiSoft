@@ -1,0 +1,14 @@
+# APP
+# © Copy 2020
+# Events: 
+General: [Detail:Connection errorKeyword not supported: 'provider'.], [EX:System.Exception: Connection errorKeyword not supported: 'provider'.
+   at Server.Logic.DataAccess..ctor(String connection) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 24
+   at Server.Logic.Product.All() in C:\DESARROLLO\Application\Server\Server\Server.Logic\Product.cs:line 18
+   at Server.Services.Controllers.ProductController.Get() in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\ProductController.cs:line 21] ,[InnerException:No.] 
+
+General: [Detail:The EXECUTE permission was denied on the object 'Sp_Product_Search', database 'App', schema 'dbo'.], [EX:System.Data.SqlClient.SqlException (0x80131904): The EXECUTE permission was denied on the object 'Sp_Product_Search', database 'App', schema 'dbo'.
+   at Server.Logic.DataAccess.Search(String Procedure, Dictionary`2 Parameters) in C:\DESARROLLO\Application\Server\Server\Server.Logic\DataAccess.cs:line 75
+   at Server.Logic.Product.All() in C:\DESARROLLO\Application\Server\Server\Server.Logic\Product.cs:line 18
+   at Server.Services.Controllers.ProductController.Get() in C:\DESARROLLO\Application\Server\Server\Server.Services\Controllers\ProductController.cs:line 21
+ClientConnectionId:ab3efedb-2656-4950-ae6f-b6c14c8d78ea
+Error Number:229,State:5,Class:14] ,[InnerException:No.] 

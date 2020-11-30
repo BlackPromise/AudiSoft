@@ -1,0 +1,126 @@
+<div class="myalert" *ngIf="showMessage" (click)="showMessage=false;">
+    <div class="alert " role="alert" [ngClass]="{'alert-success': !showError,'alert-danger':showError}">
+        {{message}}<button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-body print">
+                <div>
+                    <form [formGroup]="FormInfo" id="FormInfo">
+                        <div class="form-group">
+                            <label>Cliente : </label>
+                            <input [disabled]="loading" [ngClass]="GetErrorsClass('Client')" type="text" class="form-control form-control-sm" formControlName="Client" name="Client" (change)="FormInfo.controls.Client.setValue($event.target.value);" (blur)="ChangeItem()" (keyup.enter)="$event.target.blur();">
+                            <div class="info-errors" [innerHtml]="GetErrors('Client')"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Ruc : </label>
+                            <input [disabled]="loading" [ngClass]="GetErrorsClass('Ruc')" type="text" class="form-control form-control-sm" formControlName="Ruc" name="Ruc" (change)="FormInfo.controls.Ruc.setValue($event.target.value);" (blur)="ChangeItem()" (keyup.enter)="$event.target.blur();">
+                            <div class="info-errors" [innerHtml]="GetErrors('Ruc')"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Vendedor : </label>
+                            <input [disabled]="loading" [ngClass]="GetErrorsClass('Seller')" type="text" class="form-control form-control-sm" formControlName="Seller" name="Seller" (change)="FormInfo.controls.Seller.setValue($event.target.value);" (blur)="ChangeItem()" (keyup.enter)="$event.target.blur();">
+                            <div class="info-errors" [innerHtml]="GetErrors('Seller')"></div>
+                        </div>
+                    </form>
+                </div>
+                <hr>
+                <div class="table-responsive" *ngIf="this.currentQuotation?.detail?.length>0">
+                    <table class="table-bordered table table-striped table-hover table-sm">
+                        <caption>Lista de productos agregados - {{this.currentQuotation?.detail?.length}} registro(s)
+                        </caption>
+                        <thead class="thead-dark">
+                            <tr>
+                                <td>Producto</td>
+                                <td>Precio</td>
+                                <td>Cantidad</td>
+                                <td>Nuevo Precio</td>
+                                <td>Impuesto</td>
+                                <td>Descuento</td>
+                                <td>Total</td>
+                                <td class="no-print">Acciones</td>
+                            </tr>
+                        </thead>
+                        <tr *ngFor="let item of this.currentQuotation?.detail">
+                            <td>
+                                {{item.productName}}
+                            </td>
+                            <td>
+                                {{item.price| currency}}
+                            </td>
+                            <td>
+                                <input [disabled]="loading" type="number" class="form-control form-control-sm control-table" [value]="item.quantity" (change)="item.quantity = $event.target.value-0;" (blur)="ChangeItem()" (keyup.enter)="$event.target.blur();">
+                            </td>
+                            <td>
+                                <input [disabled]="loading" type="number" class="form-control form-control-sm control-table" [value]="item.amount" (change)="item.amount = $event.target.value-0;" (blur)="ChangeItem()" (keyup.enter)="$event.target.blur();">
+                            </td>
+                            <td>
+                                <input [disabled]="loading" type="number" class="form-control form-control-sm control-table" [value]="item.tax" (change)="item.tax = $event.target.value-0;" (blur)="ChangeItem()" (keyup.enter)="$event.target.blur();">
+                            </td>
+                            <td>
+                                <input [disabled]="loading" type="number" class="form-control form-control-sm control-table" [value]="item.discount" (change)="item.discount = $event.target.value-0;" (blur)="ChangeItem()" (keyup.enter)="$event.target.blur();">
+                            </td>
+                            <td>
+                                {{item.total| currency}}
+                            </td>
+                            <td class="no-print">
+                                <button [disabled]="loading" (click)="removeProduct()" class="btn btn-outline-danger btn-sm">
+                                    <span>&times;</span></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="alert alert-primary" role="alert" *ngIf="this.currentQuotation?.detail?.length==0">
+                    Sin productos agregados.
+                </div>
+                <button type="button" [disabled]="loading" (click)="DeleteAll()" class=" float-right btn btn-outline-danger float-right ">Eliminar cotizacion</button>
+                <button type="button" [disabled]="loading" (click)="Print();" class=" float-right btn btn-outline-secondary float-right ">Imprimir cotizacion</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 no-print">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="Form" (ngSubmit)="Save()" id="Form">
+                    <div class="form-group">
+                        <label>Producto : </label>
+                        <select [ngClass]="GetErrorsClass('ProductId')" class="form-control form-control-sm" formControlName="ProductId" name="ProductId" (change)="changeProduct()">
+                            <option [ngValue]="null" disabled>Seleccione un producto </option>
+                            <option [ngValue]="item.productId" *ngFor="let item of Products">{{item.productName}}
+                            </option>
+                        </select>
+                        <div class="info-errors" [innerHtml]="GetErrors('ProductId')"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Cantidad : </label>
+                        <input [ngClass]="GetErrorsClass('Quantity')" type="number" class="form-control form-control-sm" formControlName="Quantity" name="Quantity">
+                        <div class="info-errors" [innerHtml]="GetErrors('Quantity')"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Valor : </label>
+                        <input [ngClass]="GetErrorsClass('Amount')" type="number" class="form-control form-control-sm" formControlName="Amount" name="Amount">
+                        <div class="info-errors" [innerHtml]="GetErrors('Amount')"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Impuesto : </label>
+                        <input [ngClass]="GetErrorsClass('Tax')" type="number" class="form-control form-control-sm" formControlName="Tax" name="Tax">
+                        <div class="info-errors" [innerHtml]="GetErrors('Tax')"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Descuento : </label>
+                        <input [ngClass]="GetErrorsClass('Discount')" type="number" class="form-control form-control-sm" formControlName="Discount" name="Discount">
+                        <div class="info-errors" [innerHtml]="GetErrors('Discount')"></div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" [disabled]="loading" (click)="CreateForm()" class="btn btn-outline-secondary float-right ">Limpiar</button>
+                        <button type="submit" [disabled]="loading" class="btn btn-outline-primary float-right">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

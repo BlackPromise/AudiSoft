@@ -1,0 +1,43 @@
+* {
+    box-shadow: none !important;
+    outline: none !important;
+    font-family: ui-monospace !important;
+}
+
+.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.info-errors {
+    height: 0px;
+}
+
+.info-errors label {
+    position: relative;
+    top: -2px;
+    color: #f99f98;
+    display: block;
+    font-size: 12px;
+    font-family: serif;
+    font-style: oblique;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.info-errors label:before {
+    content: "* ";
+}
+
+.error-input {
+    border-color: #f4433682;
+    border: #f4433682 solid 1px;
+}
+
+body {
+    background: #9e9e9e40;
+}
+
+.container-fluid {
+    margin-top: 15px;
+}
